@@ -1,0 +1,20 @@
+:root {
+  --primary: #d8f8f5;
+  --secondary: #c7ede8;
+  --tertiary: #bedddc;
+  --background: #e7f9f9;
+  --text: #5a878a;
+
+  --primary-danger: #ffcccc;
+  --secondary-danger: #ff9999;
+  --tertiary-danger: #ff9191;
+
+  --font-xs: 16px;
+  --font-s: 24px;
+  --font-m: 48px;
+  --font-l: 64px;
+
+  --border-card: 30px;
+  --border-button: 20px;
+  --border-input: 10px;
+}
