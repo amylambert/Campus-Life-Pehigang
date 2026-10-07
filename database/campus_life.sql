@@ -1,4 +1,10 @@
 -- ============================
+-- DATABASE : campus_life
+-- ============================
+CREATE DATABASE campus_life;
+USE campus_life;
+
+-- ============================
 -- TABLE : dishes
 -- ============================
 CREATE TABLE dishes (

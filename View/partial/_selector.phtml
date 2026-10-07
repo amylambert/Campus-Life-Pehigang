@@ -1,0 +1,10 @@
+<section id="selector">
+    <h1> Plats disponibles </h1>
+    <?php foreach ($dishes as $dish) { ?>
+        <div class="dish">
+            <h2> <?= $dish->getName() ?> </h2>
+            <p> <?= $dish->getIngredients() ?> </p>
+            <p> Prix : <?= $dish->getPrice() ?> </p>
+        </div>
+    <?php } ?>
+</section>
