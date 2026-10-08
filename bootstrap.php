@@ -14,7 +14,8 @@ require_once __DIR__ . '/Manager/DishManager.php';
 
 //controllers
 require_once __DIR__ . '/Controller/AbstractController.php';
-require_once __DIR__ . '/Controller/PageController.php';
+require_once __DIR__ . '/Controller/MenuController.php';
+require_once __DIR__ . '/Controller/AuthController.php';
 
 //services
 require_once __DIR__ . '/Service/Router.php';

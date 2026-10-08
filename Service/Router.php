@@ -1,24 +1,42 @@
 <?php
+
 class Router
 {
-    public function handleRequest(array $get) : void
+    private MenuController $mc;
+    private AuthController $ac;
+    public function __construct()
     {
-        $ctrl = new PageController;
+        $this->mc = new MenuController();
+        $this->ac = new AuthController();
+    }
 
-        if(isset($get['route']))
+    public function handleRequest() : void
+    {
+        if(!empty($_GET["route"]))
         {
-            if($get['route'] === "home")
-            {
-                $ctrl->selector();
+            if($_GET['route'] === 'login') {
+                $this->ac->login();
+            }
+            else if($_GET['route'] === 'register') {
+                $this->ac->register();
+            }
+            else if($_GET['route'] === 'logout') {
+                $this->ac->logout();
+            }
+            else if($_GET['route'] === 'home') {
+                $this->ac->home();
+            }
+            else if ($_GET['route'] === 'selector') {
+                $this->mc->selector();
             }
             else
             {
-                $ctrl->notFound();
+                $this->ac->notFound();
             }
         }
         else
         {
-            $ctrl->selector();
+            $this->ac->home();
         }
     }
 }
